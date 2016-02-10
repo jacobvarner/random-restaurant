@@ -19,3 +19,9 @@ Template.randomize.helpers({
     return output;
   }
 });
+
+Template.randomize.events({
+  'click #button': function() {
+    window.location.reload();
+  }
+});

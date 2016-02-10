@@ -1,6 +1,10 @@
 <template name="randomize">
-  <h2>Random Restaurant</h2>
-  <p>Based on the restaurants <a href="{{pathFor route='edit'}}">you have added</a> then you should go and eat at...</p>
-  <h3>{{random}}</h3>
-  <p>To pick again, just refresh the page.</p>
+  <div class="container">
+    <div class="random">
+      <h2>Random Restaurant</h2>
+      <p>Based on the restaurants <a href="{{pathFor route='edit'}}">you have added</a>, you should go to...</p>
+      <h3>{{random}}</h3>
+      <a href="#" id="button">Pick Again</a>
+    </div>
+  </div>
 </template>

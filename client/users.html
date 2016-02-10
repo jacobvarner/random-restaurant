@@ -15,16 +15,3 @@
 		<p><input type="submit" value="Login"></p>
 	</form>
 </template>
-<template name="navigation">
-	<ul id="nav">
-		<li><a href="{{pathFor route='home'}}">Home</a></li>
-		{{#if currentUser}}
-			<li><a href="#" class="logout">Logout</a></li>
-      <li><a href="{{pathFor route='edit'}}">Edit</a></li>
-      <li><a href="{{pathFor route='randomize'}}">Randomize</a></li>
-		{{else}}
-			<li><a href="{{pathFor route='register'}}">Register</a></li>
-			<li><a href="{{pathFor route='login'}}">Login</a></li>
-		{{/if}}
-	</ul>
-</template>

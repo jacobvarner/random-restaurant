@@ -10,12 +10,31 @@
 </template>
 
 <template name="footer">
-  <p>&copy; <a href="http://www.jacobvarner.com">Jacob Varner</a>, 2016</p>
+  <div class="footer">
+    <p>Copyright &copy; <a href="http://www.jacobvarner.com">Jacob Varner</a>, 2016</p>
+  </div>
 </template>
 
 <template name="home">
-  <h1>Restaurant Picker</h1>
-  <p>Randomly pick from a set of restaurants that you enjoy to help with lunch plans everyday!</p>
-  <p>In order to use the application, quickly register via the link above and then once you are logged in you can add and remove restaurants to/from your list and then the application can randomly select a restaurant from your list.</p>
-  <h4>Happy eating!</h4>
+  <div class="container">
+    <div class="home">
+      <h1>Restaurant Picker</h1>
+      <p>Restaurant Picker was designed to randomly select a restaurant to eat at from a list that you can define yourself. This solves a dilema that I have at work almost every day and I'm sure others could get use out of it as well.</p>
+      <p>To use Restaurant Picker, it's quite simple. Just make a quick account, add restaurants to your list, and then click the "randomize" button whenever you are ready to select a place to eat. You can always add and remove restaurants from your list.</p>
+    </div>
+  </div>
+</template>
+
+<template name="navigation">
+	<ul id="nav">
+		<li><a href="{{pathFor route='home'}}">Home</a></li>
+		{{#if currentUser}}
+			<li><a href="#" class="logout">Logout</a></li>
+      <li><a href="{{pathFor route='edit'}}">Edit</a></li>
+      <li class="highlight"><a href="{{pathFor route='randomize'}}">Randomize</a></li>
+		{{else}}
+			<li><a href="{{pathFor route='register'}}">Register</a></li>
+			<li><a href="{{pathFor route='login'}}">Login</a></li>
+		{{/if}}
+	</ul>
 </template>

@@ -1,13 +1,17 @@
 <template name="edit">
-  <h2>Add and remove restaurants from your list</h2>
-  <p>If you would like a restaurant to have a higher chance of randomly being selected, just add it to your list multiple times.</p>
-  <ul>
-    {{#each restaurantList}}
-      <li>{{this.restaurant}} [<a href="#" class="delete">Delete</a>]</li>
-    {{/each}}
-  </ul>
-  <form id="addRestaurant">
-    <input type="text" name="restaurant" placeholder="Taco Bell" />
-    <input type="submit" value="Add" />
-  </form>
+  <div class="container">
+    <div class="edit">
+      <h2>Edit Restaurants</h2>
+      <p>If you would like a restaurant to have a higher chance of randomly being selected, just add it to your list multiple times.</p>
+      <form id="addRestaurant">
+        <input id="textbox" type="text" name="restaurant" placeholder="Restaurant Name" />
+        <input id="addButton" type="submit" value="Add" />
+      </form>
+      <ul>
+        {{#each restaurantList}}
+          <li>{{this.restaurant}} <a href="#" class="delete">x</a></li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
 </template>
